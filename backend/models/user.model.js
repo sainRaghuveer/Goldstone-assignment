@@ -12,10 +12,18 @@ const userSchema = new mongoose.Schema({
         required: true
     },
     gender: {
-        type: String
+        type: String,
+        enum:{
+            values:["male", "female"],
+            message:"Choose your gender only male or female"
+        }
     },
     status: {
-        type: String
+        type: String,
+        enum:{
+            values:["active", "inactive"],
+            message:"Choose your status only active or inactive"
+        }
     }
 },{timestamps:true});
 

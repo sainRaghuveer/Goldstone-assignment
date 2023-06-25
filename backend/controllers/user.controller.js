@@ -71,7 +71,7 @@ exports.postUser = async (req, res) => {
         res.status(200).send(users);
     } catch (error) {
         console.error("Error fetching users check again:", error);
-        res.status(500).send({ error: "Something went wrong, check your request" });
+        res.status(400).send({ "msg": error.message, "error": error });
     }
 }
 
@@ -90,15 +90,26 @@ exports.getUser = async (req, res) => {
 
 
 /*----------------------- User update route -------------------------*/
-exports.updateUser = async(req, res)=>{
-    const id = req.params.id;
-    const {name, email, gender, status} = req.body;
+exports.updateUser = async (req, res) => {
 
+    const id = req.params.id;
+    const { name, email, gender, status } = req.body;
+
+    if (!req.body) {
+        res.status(401).send({ message: 'Please provide update inputs or try again' })
+        return;
+    };
+   
     try {
-        const result = await userModel.findByIdAndUpdate({ _id: id },req.body);
-        res.send({ message: "User data updated successfully", user:result });
+        const userData = await UserModel.findById(userId);
+        if(userData){
+            const result = await userModel.findByIdAndUpdate({ _id: id }, req.body);
+            res.status(200).send({ message: "User data updated successfully", user: result });
+        }else{
+            res.status(404).send({ message: "User Not found try again with different credentials"});
+        }
     } catch (error) {
         console.error("Error updating user data:", error);
-        res.status(500).send({ error: "An error occurred while updating user data" });
+        res.status(400).send({"msg":error.message, "error": `An error:(${error}) occurred while updating user data` });
     }
 }
