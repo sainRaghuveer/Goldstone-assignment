@@ -1,0 +1,72 @@
+.parentContainer {
+    padding: 15px;
+}
+.csvContainer{
+    width: 20%;
+   position: fixed;
+   top: 80px;
+   right: 60px;
+}
+.tableContainer{
+    width: 90%;
+    margin: auto;
+    margin-top:80px;
+    color: black;
+}
+Th{
+    border: 1px solid red;
+}
+
+#loader{
+    margin-left:300px;
+    width:100%;
+    height:300px
+}
+
+
+@media screen and (min-width:901px) and (max-width: 1200px) {
+    .searchContainer>div:nth-child(1) {
+        width: 90%;
+    }
+    .searchContainer>div:nth-child(2) {
+        width: 70%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    #loader{
+        margin-left:170px;
+        width:100%;
+        height:300px
+    }
+  
+  }
+
+@media screen and (min-width:601px) and (max-width: 900px) {
+    #loader{
+        margin-left:150px;
+        width:100%;
+        height:300px
+    } 
+  }
+
+@media (max-width: 600px) {
+    .tableContainer{
+        width: 100%;
+        margin: auto;
+        margin-top:50px;
+        color: black;
+    }
+    .csvContainer{
+        width: 45%;
+      margin: auto;
+      align-items: center;
+      position: static;
+      text-align: center;
+    }
+    #loader{
+        margin-left:50px;
+        width:100%;
+        height:300px
+    }
+ }

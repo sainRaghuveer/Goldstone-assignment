@@ -101,7 +101,7 @@ exports.updateUser = async (req, res) => {
     };
    
     try {
-        const userData = await UserModel.findById(userId);
+        const userData = await userModel.findById(id);
         if(userData){
             const result = await userModel.findByIdAndUpdate({ _id: id }, req.body);
             res.status(200).send({ message: "User data updated successfully", user: result });
