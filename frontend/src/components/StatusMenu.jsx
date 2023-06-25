@@ -20,7 +20,7 @@ const StatusMenu = ({ status, id, getData }) => {
         if (newStatus !== "") {
             const obj = { status: newStatus };
             setLoading(true);
-            axios.patch(`http://localhost:8080/api/user/${id}`, obj)
+            axios.patch(`https://goldstone-assignment-backend.onrender.com/api/user/${id}`, obj)
                 .then((res) => {
                     getData();
                     setLoading(false);

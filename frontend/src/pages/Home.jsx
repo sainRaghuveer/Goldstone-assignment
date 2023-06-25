@@ -37,7 +37,7 @@ const Home = () => {
     const getData = async () => {
         try {
             setLoading(true);
-            const response = await fetch(`http://localhost:8080/api/user/data`);
+            const response = await fetch(`https://goldstone-assignment-backend.onrender.com/api/user/data`);
             const res = await response.json();
             console.log("res", res)
             if (response.ok) {
@@ -76,7 +76,7 @@ const Home = () => {
         console.log('CSV downloaded')
         // Making a request to the backend to initiate the download
         setCsvLoading(true);
-        fetch(`http://localhost:8080/api/export-csv`)
+        fetch(`https://goldstone-assignment-backend.onrender.com/api/export-csv`)
             .then((response) => response.blob())
             .then((blob) => {
                 // Creating a URL for the blob object
