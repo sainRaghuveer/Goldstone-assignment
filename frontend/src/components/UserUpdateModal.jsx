@@ -38,6 +38,13 @@ export default function UserUpdateModal({ id, getData, data }) {
             });
             return;
         };
+        if (name == "" || email == "" || gender == "" || status == "") {
+            toastMsg({
+                title: `Please fill input and try again`,
+                status: "warning"
+            });
+            return;
+        };
 
         let obj = {
             name: name,
