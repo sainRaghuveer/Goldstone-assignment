@@ -35,7 +35,6 @@ const StatusMenu = ({ status, id, getData }) => {
                         title: `${error.message}`,
                         status: "error"
                     });
-                    console.log(error);
                 });
         }
     }, [newStatus]);
