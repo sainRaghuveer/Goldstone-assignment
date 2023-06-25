@@ -24,12 +24,8 @@ import { Spinner } from '@chakra-ui/react'
 
 const Home = () => {
     const [data, setData] = useState([]);
-    console.log("data", data)
     const [loading, setLoading] = useState(false);
     const [csvLoading, setCsvLoading] = useState(false);
-    const [page, setPage] = useState(1);
-    const [query, setQuery] = useState("");
-    const [totalPage, setTotalPage] = useState()
     const navigate = useNavigate();
     const toastMsg = UseToast();
 
@@ -49,7 +45,6 @@ const Home = () => {
             }
         } catch (error) {
             setLoading(false);
-            console.log('Error:', error);
             toastMsg({
                 title: `${error.message}`,
                 status: "error"
@@ -116,7 +111,7 @@ const Home = () => {
                         variant='outline'
                     >
                         Submit
-                    </Button> : <Button onClick={downloadCSV}><DownloadIcon /> {"Export to Csv"}</Button>}
+                    </Button> : <Button onClick={downloadCSV} zIndex="100"><DownloadIcon /> {"Export to Csv"}</Button>}
                 </div>
             </div>
             <div className='tableContainer'>

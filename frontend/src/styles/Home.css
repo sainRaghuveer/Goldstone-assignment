@@ -6,6 +6,7 @@
    position: fixed;
    top: 80px;
    right: 60px;
+   z-index: 100;
 }
 .tableContainer{
     width: 90%;

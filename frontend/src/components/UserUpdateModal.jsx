@@ -54,7 +54,6 @@ export default function UserUpdateModal({ id, getData, data }) {
         };
 
         axios.patch(`https://goldstone-assignment-backend.onrender.com/api/user/${id}`, obj).then((res) => {
-            console.log(res);
             toastMsg({
                 title: `User data Updated successfully`,
                 status: "success"
