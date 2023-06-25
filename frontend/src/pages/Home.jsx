@@ -106,7 +106,7 @@ const Home = () => {
                     <Button onClick={() => navigate("/")} display="none"><AiOutlinePlus /> Add User</Button>
                     {csvLoading ? <Button
                         isLoading
-                        loadingText='Wait...'
+                        loadingText='Please Wait...'
                         colorScheme='blue'
                         variant='outline'
                     >
