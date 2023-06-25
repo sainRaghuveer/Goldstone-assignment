@@ -301,24 +301,30 @@ Note : `Don't Change any file name or do not delete any files`
 
 ## Home Page
  
-<img src="" alt="image"/>
+<img src="https://github.com/sainRaghuveer/Goldstone-assignment/assets/112657812/29ecf320-8668-4241-b544-dfabd3c4152c" alt="image"/>
 
 <br>
     
-##  Status Menu  
+##  Status Menu: Where you can change your status directly by selecting status 
     
-<img src="" alt="image"/>
+<img src="https://github.com/sainRaghuveer/Goldstone-assignment/assets/112657812/f851a114-3042-4379-b8e7-b1f3dfa1f6e9" alt="image"/>
 
 <br>
     
-## Action Menu
+## Action Menu: Here you can update all data of the user
     
-<img src="" alt="image"/>
+<img src="https://github.com/sainRaghuveer/Goldstone-assignment/assets/112657812/919b31f2-87cf-41fc-a8f5-5893f826db08" alt="image"/>
 
 <br>
-    
-## Single user View   
 
-<img src="" alt="image"/>
+## Export data in CSV: By clicking this Export as Csv button data will get downloaded in your device
+    
+<img src="https://github.com/sainRaghuveer/Goldstone-assignment/assets/112657812/8ae8c620-248d-4da4-bc12-f39af0f1c3fc" alt="image"/>
+
+<br>
+
+## Dark Mode: You can enjoy dark mode these as well
+    
+<img src="https://github.com/sainRaghuveer/Goldstone-assignment/assets/112657812/22fd47c3-07c1-4eb4-88d7-893b36719fc6" alt="image"/>
 
 <br>
