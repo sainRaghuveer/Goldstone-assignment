@@ -83,7 +83,7 @@ exports.getUser = async (req, res) => {
         res.status(200).send(users);
     } catch (error) {
         console.error("Error fetching users check again:", error);
-        res.status(500).send({ error: "Something went wrong, check your request" });
+        res.status(404).send({ "msg": error.message, "error":error });
     }
 }
 
